@@ -1,12 +1,24 @@
+
 public class SortingUtil {
+    public static void swaps(int arr[],int i, int j){
+        int temp = arr [j];
+        arr[j] = arr[j+1];
+        arr[j+1] = temp;
+    }
+
     public static void BubbleSort(int[]arr){
-        int swaps=0;
-        while (swaps>0){
-            swaps=1;
+
             for (int i=0; i<arr.length-1; i++)
             {
-                if (arr)
+                for (int j = 0; j < arr.length - i -1 ; j++)
+                {
+                    if (arr[j]>arr[j+1])
+                    {
+                        swaps(arr, i, j);
+                    }
+                }
+
             }
         }
-    }
 }
+
